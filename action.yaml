@@ -25,4 +25,4 @@ runs:
         - '${{ inputs.message }}'
         - '${{ inputs.developer }}'
         - '${{ inputs.commit_sha }}'
-        - '${{ github.server_url }}
+        - '${{ github.server_url }}'
