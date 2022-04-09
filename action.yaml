@@ -17,6 +17,9 @@ inputs:
     commit_sha:
         description: commit sha starting the workflow
         required: true
+    server_url:
+        description: server url
+        required: true
 runs:
     using: 'docker'
     image: 'Dockerfile'
@@ -25,4 +28,4 @@ runs:
         - '${{ inputs.message }}'
         - '${{ inputs.developer }}'
         - '${{ inputs.commit_sha }}'
-        - '${{ github.server_url }}'
+        - '${{ inputs.server_url }}'
