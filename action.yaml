@@ -5,15 +5,24 @@ branding :
 author: 'BitFlib'
 description: 'Sending a message'
 inputs:
+    repo:
+        description: repo name
+        required: true
     message:
         description: Message to be sent
         required: true
-    github:
-        description: github context
+    developer:
+        description: developer name starting the workflow
+        required: true
+    commit_sha:
+        description: commit sha starting the workflow
         required: true
 runs:
     using: 'docker'
     image: 'Dockerfile'
     args:
+        - '${{ inputs.repo }}'
         - '${{ inputs.message }}'
-        - '${{ inputs.github }}'
+        - '${{ inputs.developer }}'
+        - '${{ inputs.commit_sha }}'
+        - '${{ github.server_url }}
