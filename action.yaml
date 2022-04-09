@@ -1,0 +1,15 @@
+name: 'Sending message'
+branding :
+    icon : 'send'
+    color : 'gray-dark'
+author: 'BitFlib'
+description: 'Sending a message'
+inputs:
+    message:
+        description: Message to be sent
+        required: true
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - '${{ inputs.message }}'
