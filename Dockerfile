@@ -1,4 +1,4 @@
-FROM curlimages/curl:7.82.0
+FROM ubuntu:22:04
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
