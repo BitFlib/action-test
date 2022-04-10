@@ -1,5 +1,4 @@
-FROM alpine:3.15
-RUN apk --no-cache add curl
+FROM curlimages/curl:7.82.0
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
